@@ -13,14 +13,14 @@ dbConnection.getConnection((err, connection) => {
   }
 });
 
-/* dbConnection.query("INSERT INTO students (name, midterm_grade, final_grade) VALUES ('Hakan', 70, 80)", (err, results, fields) => {
+ dbConnection.query("INSERT INTO students (name, midterm_grade, final_grade) VALUES ('Merve', 90, 40)", (err, results, fields) => {
   if (err) {
       console.log("Database query error: ", err);
   } else {
       console.log("Data inserted successfully");
   }
 });
- */
+ 
 
 
 app.get("/students", (req, res) => {
@@ -52,6 +52,8 @@ app.get("/students/:id", (req, res) => {
     }
   );
 });
+
+
 app.listen(3000,()=>{
   console.log("Server listening on port 3000")
 })
